@@ -40,7 +40,7 @@ async def gg(user_id, account, amount, message_id):
     keyboard = InlineKeyboardMarkup(inline_keyboard=kb_list)
 
     kb = [
-      [types.InlineKeyboardButton(text="Подписаться", url=f'''https://t.me/anypaymentTG''')
+      [types.InlineKeyboardButton(text="Подписаться", url=f'''https://t.me/anypaymentTG''')]
       ]
 
     keyboard_channel = InlineKeyboardMarkup(inline_keyboard=kb)
