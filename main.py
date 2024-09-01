@@ -8,7 +8,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 
-token = '7224598074:AAHahsZ7bwKowTPkApaWU6JI6jmNSOg2mag'
+token = '7213796949:AAEXU9wzXOWAvR_qkI_zxjIm_C30Z0EeKAA'
 
 
 db_host = "93.93.207.52"
