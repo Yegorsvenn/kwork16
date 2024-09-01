@@ -10,11 +10,11 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 token = '7213796949:AAEXU9wzXOWAvR_qkI_zxjIm_C30Z0EeKAA'
 
-
-db_host = "93.93.207.52"
+db_host = "185.247.185.204"
 db_user = "gen_user" 
-db_password = "PUQC7sa$"
+db_password = "HTXFmxM6=ri\+"
 db_name = "default_db"
+
 
 bot = Bot(token)
 
