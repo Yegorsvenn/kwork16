@@ -67,21 +67,27 @@ def webhook():
 
         mycursor.execute("SELECT * FROM kwork16_users WHERE user_id = '{}'".format(payment_info[1]))
         user_info = mycursor.fetchone()
-        bonus = int(user_info[2]) - 1
+        bonus = int(user_info[2])
+        if bonus >= 0:
+            bonus = bonus - 1
         
         mycursor.execute("UPDATE kwork16_users SET bonuses = '{}' WHERE user_id = '{}' ".format(bonus, int(payment_info[1])))
         mydb.commit()
 
-
+        mycursor.close()
+        mydb.close()
 
         asyncio.get_event_loop().run_until_complete(gg(payment_info[1], payment_info[2], payment_info[3], payment_info[5]))
 
+
+    
         return 'sucsess'
     except:
+        mycursor.close()
+        mydb.close()
         return 'warning' 
 
-    mycursor.close()
-    mydb.close()
+
 
 
 if __name__ == '__main__':
