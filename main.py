@@ -47,7 +47,7 @@ async def gg(user_id, account, amount, message_id):
 
 
     await bot.edit_message_text(text=text, chat_id=user_id, message_id=message_id, reply_markup=keyboard)
-    await bot.send_message(user_id, f'Аккаунт {account} успешно пополнен на {amount} рублей!\n\n<a href=https://t.me/anypaymentTG>Не забудь подписаться на наш ТГ канал</a>', reply_markup=keyboard_channel, parse_mode="HTML")
+    await bot.send_message(user_id, f'Аккаунт {account} успешно пополнен на {amount} рублей!\n\n<a href="https://t.me/anypaymentTG">Не забудь подписаться на наш ТГ канал</a>', reply_markup=keyboard_channel, parse_mode="HTML")
 
     return 'sucsess'
 
