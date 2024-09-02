@@ -68,7 +68,7 @@ def webhook():
         mycursor.execute("SELECT * FROM kwork16_users WHERE user_id = '{}'".format(payment_info[1]))
         user_info = mycursor.fetchone()
         bonus = int(user_info[2])
-        if bonus >= 0:
+        if bonus > 0:
             bonus = bonus - 1
         
         mycursor.execute("UPDATE kwork16_users SET bonuses = '{}' WHERE user_id = '{}' ".format(bonus, int(payment_info[1])))
